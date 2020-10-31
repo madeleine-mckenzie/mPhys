@@ -1,6 +1,6 @@
 #!/usr/bin/expect -f
 
-#Puts you directly into Plieadies to interact
+#Puts you directly into Magellan machines to interact
 spawn ssh mmckenzie@inter.icrar.org
 expect "*assword: "
 send "PUT_UR_PASSWORD_HERE\r"
@@ -13,13 +13,15 @@ send "PUT_UR_PASSWORD_HERE\r"
 expect "$ "
 
 # Put what machine you want to log onto (blocked out for github upload)
-send "ssh ****@magellan2.icrar.org
+# update which machine you want to log into (magellan2, magellan3 etc.)
+send "ssh ****@magellan*.icrar.org
 "
 expect "*assword: "
 send "PUT_UR_PASSWORD_HERE\r"
 expect "$ "
 
-send "cd grapepkg1.2.1/run.dir/runggc1.dir
+# cd into whatever file you need next
+send "cd grapepkg1.2.1/run.dir
 "
 
 send "tail ttt1
