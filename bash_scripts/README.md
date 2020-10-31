@@ -1,3 +1,3 @@
 # Bash scipts to get data QUICKLY!
 
-Files:
+WARNING: none of these files will work unless you manually go in and edit the passwords and ssh keys. I'm not uploading my ssh passwords to the internet, I'm not that stupid...
