@@ -8,3 +8,6 @@ if !broken:
 ```
 
 See the revisions file for the additional analysis and models run after the first round of revisions. This is where the animation code is hiding!
+
+
+Note: files were uploaded with whatever was the last thing to run.
