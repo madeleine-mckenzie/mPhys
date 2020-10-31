@@ -13,9 +13,13 @@ These scrips will analyse the output files ```tout.dat```, ```orbit.dat``` and `
 
 note:
 iwas = 0: DM
+
      = 1: disc stars
+     
      = 2: gas
+     
      = 3: old stars (1G)
+     
      = 4: new stars (2G)
      
 
