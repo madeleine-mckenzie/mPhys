@@ -12,7 +12,9 @@ These scrips will analyse the output files ```tout.dat```, ```orbit.dat``` and `
 ```tout.dat``` contains the 6D phase space information and other parameters for each particle in the simulations (depending on file it might not contain DM output but the scripts will take care of that)
 
 note:
-iwas = 0: DM
+iwas outputs: 
+
+     = 0: DM
 
      = 1: disc stars
      
