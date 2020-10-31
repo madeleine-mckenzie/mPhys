@@ -1,0 +1,246 @@
+
+def plot_tout_4_pandas(data_array, timeStepArray):
+
+    gal, gas, new, old = to_pandas_all(data_array, 0)
+
+    minorLocatorx = AutoLocator()
+    minorLocatory = AutoLocator()
+
+    fig, ax = plt.subplots(2, 4, sharex=True, sharey=True)
+
+    fig.set_size_inches(12, 7)
+    ax_lims = 2000
+
+    font = FontProperties()
+    font.set_weight('bold')
+
+    ax[0,0].scatter(gas['x'], gas['y'], c='dimgrey', s=0.1)
+    ax[0,0].scatter(old['x'], old['y'], c='red', s=0.1)
+    ax[0,0].text(-0.8, 0.8, 'T = %.2g  yrs' %timeStepArray[0], weight = 'bold')
+    ax[0,0].set_xlim(-ax_lims,ax_lims)
+    ax[0,0].set_ylim(-ax_lims,ax_lims)
+    ax[0,0].set_ylabel("Y (kpc)")
+    ax[0,0].xaxis.set_minor_locator(minorLocatorx)
+    ax[0,0].yaxis.set_minor_locator(minorLocatory)
+
+    ax[1,0].scatter(gas['x'], gas['z'], c='dimgrey', s=0.05)
+    ax[1,0].scatter(gas['x'], gas['z'], c='red', s=0.05)
+    ax[1,0].set_xlim(-ax_lims,ax_lims)
+    ax[1,0].set_ylim(-ax_lims,ax_lims)
+    ax[1,0].set_xlabel("X (kpc)")
+    ax[1,0].set_ylabel("Z (kpc)")
+    ax[1,0].xaxis.set_minor_locator(minorLocatorx)
+    ax[1,0].yaxis.set_minor_locator(minorLocatory)
+
+    gal, gas, new, old = to_pandas_all(data_array, 1)
+
+    #for plot labels
+    gs= ax[0,1].scatter(gas['x'], gas['y'], c='dimgrey', s=0.05)
+    gc=ax[0,1].scatter(old['x'], old['y'], c='red', s=0.05)
+    ns=ax[0,1].scatter(new['x'], new['y'], c='cyan', s=1)
+    ax[0,1].text(-0.8* ax_lims, 0.8* ax_lims, 'T = %.2g  yrs' %timeStepArray[1], weight = 'bold')
+    ax[0,1].set_xlim(-ax_lims,ax_lims)
+    ax[0,1].set_ylim(-ax_lims,ax_lims)
+
+    ax[1,1].scatter(gas['x'], gas['z'], c='dimgrey', s=0.05)
+    ax[1,1].scatter(old['x'], old['z'], c='red', s=0.05)
+    ax[1,1].scatter(new['x'], new['z'], c='cyan', s=1)
+    ax[1,1].set_xlim(-ax_lims,ax_lims)
+    ax[1,1].set_ylim(-ax_lims,ax_lims)
+    ax[1,1].set_xlabel("X (kpc)")
+    ax[1,1].xaxis.set_minor_locator(minorLocatorx)
+    ax[1,1].yaxis.set_minor_locator(minorLocatory)
+
+    gal, gas, new, old = to_pandas_all(data_array, 2)
+
+    ax[0,2].scatter(gas['x'], gas['y'], c='dimgrey', s=0.05)
+    ax[0,2].scatter(old['x'], old['y'], c='red', s=0.05)
+    ax[0,2].scatter(new['x'], new['y'], c='cyan', s=1)
+    ax[0,2].text(-0.8* ax_lims, 0.8* ax_lims, 'T = %.2g  yrs' %timeStepArray[2],  weight = 'bold')
+    ax[0,2].set_xlim(-ax_lims,ax_lims)
+    ax[0,2].set_ylim(-ax_lims,ax_lims)
+    ax[0,2].xaxis.set_minor_locator(minorLocatorx)
+    ax[0,2].yaxis.set_minor_locator(minorLocatory)
+
+    ax[1,2].scatter(gas['x'], gas['z'], c='dimgrey',s=0.05)
+    ax[1,2].scatter(old['x'], old['z'], c='red', s=0.05)
+    ax[1,2].scatter(new['x'], new['z'], c='cyan', s=1)
+    ax[1,2].set_xlim(-ax_lims,ax_lims)
+    ax[1,2].set_ylim(-ax_lims,ax_lims)
+    ax[1,2].set_xlabel("X (kpc)")
+    ax[1,2].xaxis.set_minor_locator(minorLocatorx)
+    ax[1,2].yaxis.set_minor_locator(minorLocatory)
+
+    gal, gas, new, old = to_pandas_all(data_array, 3)
+
+    ax[0,3].scatter(gas['x'], gas['y'], c='dimgrey', s=0.05)
+    ax[0,3].scatter(old['x'], old['y'], c='red', s=0.05)
+    ax[0,3].scatter(new['x'], new['y'], c='cyan', s=1)
+    ax[0,3].text(-0.8*ax_lims, 0.8*ax_lims, 'T = %.2g  yrs' %timeStepArray[3],  weight = 'bold')
+    ax[0,3].set_xlim(-ax_lims,ax_lims)
+    ax[0,3].set_ylim(-ax_lims,ax_lims)
+    ax[0,3].xaxis.set_minor_locator(minorLocatorx)
+    ax[0,3].yaxis.set_minor_locator(minorLocatory)
+
+
+    ax[1,3].scatter(gas['x'], gas['z'], c='dimgrey',s=0.05)
+    ax[1,3].scatter(old['x'], old['z'], c='red', s=0.05)
+    ax[1,3].scatter(new['x'], new['z'], c='cyan', s=1)
+    ax[1,3].set_xlim(-ax_lims,ax_lims)
+    ax[1,3].set_ylim(-ax_lims,ax_lims)
+    ax[1,3].set_xlabel("X (kpc)")
+    ax[1,3].xaxis.set_minor_locator(minorLocatorx)
+    ax[1,3].yaxis.set_minor_locator(minorLocatory)
+
+    ax[0,0].tick_params(direction='in', axis='both', which='both', bottom=True,top=True, left=True, right=True)
+    ax[0,1].tick_params(direction='in', axis='both', which='both', bottom=True,top=True, left=True, right=True)
+    ax[0,2].tick_params(direction='in', axis='both', which='both', bottom=True,top=True, left=True, right=True)
+    ax[0,3].tick_params(direction='in', axis='both', which='both', bottom=True,top=True, left=True, right=True)
+    ax[1,0].tick_params(direction='in', axis='both', which='both', bottom=True,top=True, left=True, right=True)
+    ax[1,1].tick_params(direction='in', axis='both', which='both', bottom=True,top=True, left=True, right=True)
+    ax[1,2].tick_params(direction='in', axis='both', which='both', bottom=True,top=True, left=True, right=True)
+    ax[1,3].tick_params(direction='in', axis='both', which='both', bottom=True,top=True, left=True, right=True)
+    plt.legend((gs, gc, ns), ('Gas', 'GC stars', 'New stars'), markerscale=10)
+    plt.tight_layout()
+    plt.savefig("spacial_positions.jpeg")
+    plt.close()
+    del gal, gas, old, new
+
+
+
+
+
+def to_pandas_all(data_array, index):
+
+# Add possible time step combinations here
+# Terrible but works for now
+
+    timestep = len(data_array)
+
+    col_header = ['x', 'y', 'z', 'vx', 'vy', 'vz', 'iwas', 'id', 'mass']
+
+    if timestep == 3:
+        ts0 = pd.DataFrame(data_array[0], columns=col_header)
+        ts1 = pd.DataFrame(data_array[1], columns=col_header)
+        ts2 = pd.DataFrame(data_array[2], columns=col_header)
+        return ts0, ts1, ts2
+    
+    if timestep == 4:
+        gal = pd.DataFrame(data_array[index][0], columns=col_header)
+        gas = pd.DataFrame(data_array[index][1], columns=col_header)
+        new = pd.DataFrame(data_array[index][2], columns=col_header)
+        old = pd.DataFrame(data_array[index][3], columns=col_header)
+
+        return gal, gas, new, old
+
+    if timestep == 5:
+        ts0 = pd.DataFrame(data_array[0], columns=col_header)
+        ts1 = pd.DataFrame(data_array[1], columns=col_header)
+        ts2 = pd.DataFrame(data_array[2], columns=col_header)
+        ts3 = pd.DataFrame(data_array[3], columns=col_header)
+        ts4 = pd.DataFrame(data_array[4], columns=col_header)
+        return ts0, ts1, ts2, ts3, ts4
+
+def to_pandas_final(data_array, timestep):
+    return True
+
+
+def iwas(row_val):
+    switcher = {
+        1: "gal",
+        2: "gas",
+        3: "new",
+        4: "old",
+    }
+    return switcher.get(row_val, "Invalid iwas")
+
+
+    def append_row(ts, row):
+    if iwas(row[6]) == "gal":
+        #print('appending gal')
+        ts.append_gal(row)
+    elif iwas(row[6]) == "gas":
+        #print('appending gas')
+        ts.append_gas(row)
+    elif iwas(row[6]) == "new":
+        #print('appending new')
+        ts.append_new(row)
+    elif iwas(row[6]) == "old":
+        #print('appending old')
+        ts.append_old(row)
+    else:
+        print("WARNING: unknown iwas argument")
+        sys.exit()
+
+
+
+# put values into physical quantities
+def scale_arrays_row(row):
+
+    row[0] *= scale.to_pc  # all x
+    row[1] *= scale.to_pc  # all y
+    row[2] *= scale.to_pc  # all z
+
+    row[3] *= scale.v  # all vx
+    row[4] *= scale.v  # all vy
+    row[5] *= scale.v  # all vz
+
+    row[6] = int(row[6]) # cast to integer
+
+    row[8] *= scale.m  # all mass
+    return row
+
+
+
+from make summary:
+
+    f= open("summaryUpdated.txt","w+")
+    f.write("new stars within radius: "+ str(new_in_rad) + "\n")
+    f.write("total number of stars within radius: "+ str(new_count_in_rad)+ "\n")
+
+    f.write("New star mass within radius: "+ str(new_mass) + " Msun"+ "\n")
+    f.write("New star mass  + gas mass within radis: "+ str(new_gas) + " Msun"+ "\n")
+    f.write("New star mass: "+ str(new_mass_total) + " Msun"+ "\n")
+    f.write("Old star mass within radius: "+ str(old_mass) + " Msun"+ "\n")
+
+    f.write("New star velocity dispersion: "+ str(new_std) + " km/s"+ "\n")
+    f.write("Old star velocity dispersion: "+ str(old_std) + " km/s"+ "\n")
+
+    f.close()
+
+
+Put this back at the end of timestep analysis at the very bottom if you really want
+    print('gal_mass: ', gal_crop.mass.sum())
+    print('old v dispersion: ', old_crop.v.std())
+    print('gal v dispersion: ', gal_crop.v.std())
+    print('new v dispersion: ', new_crop.v.std())
+
+
+
+
+
+
+    p_5 = get_values(gas_crop, new_crop.loc[new_crop['id']==2], old_crop, 5)
+
+    #p_20 = get_values(gas_crop, new_crop.loc[new_crop['id']==2], old_crop, 20)
+    p_20 = get_values(gas_crop, new_crop, old_crop, 20)
+    get_para(p_5, p_20)
+
+    gal_crop = gal_crop.loc[gal_crop['r']<20]
+    gas_crop = gas_crop.loc[gas_crop['r']<20]
+    #new_crop = new_crop.loc[(new_crop['id'] ==2) & (new_crop['r']< 20)] this is the one i was using previously
+    new_crop = new_crop.loc[new_crop['r']<20] # This is the one i may have to use
+    old_crop = old_crop.loc[old_crop['r']<20]
+
+    new_crop_captured = new_crop.loc[(new_crop['id'] ==2)].mass.sum()
+
+    if outputs.xyz_vel_plotter == True:
+        xyz_vel_plot(new_crop.x_scale, new_crop.y_scale,new_crop.z_scale, new_crop.vx_scale, new_crop.vy_scale, new_crop.vz_scale)
+
+    if outputs.polar_plot == True:
+        polar_plotter(new_crop, old_crop)
+        
+    print('GC to captured stars ratio: ', new_crop_captured/new_crop.mass.sum())
+
+    if outputs.cumulative_hist_plot == True:
+        cumulative_hist(old_crop.r, new_crop.r)
