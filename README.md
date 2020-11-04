@@ -8,7 +8,7 @@ The research presented has been spit into two sub projects:
 ## Note to those assessing my masters dissertation:
 Firstly, thank you for making it to the end pages of my thesis. I sincerly appreciate that you've taken the time to read my work, thank you. 
 
-Some supplementary material for my thesis are these animations I created:
+Supplementary material for my thesis include these animations I created:
 
 Project 1:
 - Animation 1: [Galaxy scale gas accretion](https://youtu.be/JXToXAeH33Q)
