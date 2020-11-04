@@ -15,3 +15,7 @@ Just like the animation file in the previous project, it makes a gif of the gala
 
 ### 2_phase_import3
 The most important file!!
+This includes 
+
+### metallicity_plots
+Creating the large metallicity plots of the eight largest clumps
