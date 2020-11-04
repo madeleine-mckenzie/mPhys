@@ -2,8 +2,8 @@
 Code from my Masters of Astrophysics project: Simulating the Formation of Multiple Stellar Populations in Globular Clusters
 
 The research presented has been spit into two sub projects:
-- Multiple Stellar Populations an Internal Kinematics
-- Metallicity Spreads and Anomolous Precurser Generations
+- [Multiple Stellar Populations an Internal Kinematics](project_1)
+- [Metallicity Spreads and Anomolous Precurser Generations](project_2)
 
 ## Note to those assessing my masters dissertation:
 Firstly, thank you for making it to the end pages of my thesis. I sincerly appreciate that you've taken the time to read my work, thank you. 
