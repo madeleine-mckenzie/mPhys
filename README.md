@@ -3,7 +3,7 @@ Code from my Masters of Astrophysics project: Simulating the Formation of Multip
 
 The research presented has been spit into two sub projects:
 - [Multiple Stellar Populations an Internal Kinematics](project_1) (MNRAS access [here](https://academic.oup.com/mnras/advance-article-abstract/doi/10.1093/mnras/staa3376/5948118))
-- [Metallicity Spreads and Anomolous Precurser Generations](project_2)
+- [Metallicity Spreads and Anomolous Precursor Generations](project_2)
 
 ## Note to those assessing my masters dissertation:
 Firstly, thank you for making it to the end pages of my thesis. I sincerly appreciate that you've taken the time to read my work, thank you. 
